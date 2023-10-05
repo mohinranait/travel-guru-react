@@ -1,14 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
-import logo from "../../assets/logo.png";
 // import './slider.css'
-import { IoChevronBackSharp, IoChevronForward, IoSearchOutline } from "react-icons/io5";
+import { IoChevronBackSharp, IoChevronForward } from "react-icons/io5";
 import 'swiper/css/navigation';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { NavLink } from 'react-router-dom';
 import Slider from '../../components/sliders/Slider';
 import Header from '../../components/Header/Header';
 
@@ -18,32 +16,6 @@ const Home = () => {
     const [bannerContent, setBannerContent] = useState(null);
     const [banners, setBanners]  = useState([]);
 
-    // const banners = [
-    //     {
-    //         id : 1, 
-    //         image : banner,
-    //         title : "Cox'z Bazar",
-    //         text : " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta harum quam laudantium, similique ea qui ratione ex dolorem. Esse, nemo."
-    //     },
-    //     {
-    //         id : 2, 
-    //         image : "https://wallpapers.com/images/hd/travel-hd-axhrsecphqby11wk.jpg",
-    //         title : "Bandar ban",
-    //         text : " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta harum quam laudantium, similique ea qui ratione ex dolorem. Esse, nemo."
-    //     },
-    //     {
-    //         id : 3, 
-    //         image : "https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_1280.jpg",
-    //         title : "Chand dip",
-    //         text : " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta harum quam laudantium, similique ea qui ratione ex dolorem. Esse, nemo."
-    //     },
-    //     {
-    //         id : 4, 
-    //         image : "https://images.pexels.com/photos/18176787/pexels-photo-18176787.jpeg?cs=srgb&dl=pexels-hieu-duong-18176787.jpg&fm=jpg",
-    //         title : "Chand dip",
-    //         text : " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta harum quam laudantium, similique ea qui ratione ex dolorem. Esse, nemo."
-    //     }
-    // ]
 
     useEffect(() => {
         const fetchData = async () => {
@@ -57,12 +29,25 @@ const Home = () => {
 
     // handle prev
     const handlePrev = () => {
-        slideRef.current.swiper.slidePrev();
+        const index = banners.indexOf(bannerContent)
+        const currentSlider = banners[index-1]
+        if( 0 <= index-1 ){
+            slideRef.current.swiper.slidePrev();
+            setBannerContent(currentSlider)
+        }else{
+            setBannerContent(banners[banners.length-1])
+        }
     }
-
     // handle Next
     const handleNext = () => {
-        slideRef.current.swiper.slideNext();
+        const index = banners.indexOf(bannerContent)
+        const currentSlider = banners[index+1]
+        if( banners.length > index+1 ){
+            slideRef.current.swiper.slideNext();
+            setBannerContent(currentSlider)
+        }else{
+            setBannerContent(banners[0])
+        }
     }
 
     const handleSliderContent = (id) => {
