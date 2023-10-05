@@ -1,0 +1,10 @@
+.swiper-button-prev, .swiper-button-next {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+    position: absolute !important;
+    bottom: 0 !important;
+    margin-top: 153px;
+    z-index: 100 !important;
+    color: red;
+}

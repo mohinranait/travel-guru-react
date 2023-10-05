@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1, 
+        "image" : "https://images.unsplash.com/photo-1608958435020-e8a7109ba809?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80",
+        "title" : "Cox'z Bazar",
+        "text" : " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta harum quam laudantium, similique ea qui ratione ex dolorem. Esse, nemo."
+    },
+    {
+        "id" : 2, 
+        "image" : "https://wallpapers.com/images/hd/travel-hd-axhrsecphqby11wk.jpg",
+        "title" : "Bandar ban",
+        "text" : " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta harum quam laudantium, similique ea qui ratione ex dolorem. Esse, nemo."
+    },
+    {
+        "id" : 3, 
+        "image" : "https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_1280.jpg",
+        "title" : "Chand dip",
+        "text" : " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta harum quam laudantium, similique ea qui ratione ex dolorem. Esse, nemo."
+    },
+    {
+        "id" : 4, 
+        "image" : "https://images.pexels.com/photos/18176787/pexels-photo-18176787.jpeg?cs=srgb&dl=pexels-hieu-duong-18176787.jpg&fm=jpg",
+        "title" : "Chand dip",
+        "text" : " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta harum quam laudantium, similique ea qui ratione ex dolorem. Esse, nemo."
+    }
+]
