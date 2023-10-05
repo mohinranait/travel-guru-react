@@ -20,6 +20,7 @@ const Header = () => {
                         <ul className='flex items-center gap-8'>
                             <li><NavLink to="/" className={`text-white font-semibold`}>Home</NavLink></li>
                             <li><NavLink className={`text-white font-semibold`}>Donation </NavLink></li>
+                            <li><NavLink to="/booking" className={`text-white font-semibold`}>Booking</NavLink></li>
                             <li><NavLink className={`text-white font-semibold`}>Blogs</NavLink></li>
                             <li><NavLink to={'/login'} className={`px-6 py-2 rounded-md bg-[#F9A51A] text-black font-semibold`}>Login</NavLink></li>
                         </ul>
